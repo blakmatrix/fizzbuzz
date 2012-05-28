@@ -17,8 +17,9 @@ Install:
 To Use:
 -------
 
+Demo: [fizzbuzz.jit.su](http://fizzbuzz.jit.su/)
 
-Run **server**:  `node app.js`
+Run your own **server**:  `node app.js`
 
 Use it in your own app with **require**:
 
