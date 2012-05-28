@@ -30,8 +30,18 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
-app.get('/:var', function(){
-  res.send('var: ${ req.params.var }')
+app.get('/:var', function(req, res){
+
+  if( req.params.var % 3 !== 0 && req.params.var % 5 !== 0){
+    res.send(req.params.var)
+  }else if( req.params.var % 3 === 0 && req.params.var % 5 !== 0 ){
+    res.send("fizz")
+  } else if(req.params.var % 3 !== 0 && req.params.var % 5 === 0){
+    res.send("buzz")
+  } else{ // req.params.var % 3 === 0 && req.params.var % 5 === 0
+    res.send("fizzbuzz")
+  }
+  res.send('var: '+req.params.var)
 });
 
 app.listen( (process.env.PORT || 3000) , function(){
