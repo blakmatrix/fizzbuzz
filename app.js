@@ -4,7 +4,8 @@
  */
 
 var express = require('express')
-  , routes = require('./routes');
+  , routes = require('./routes')
+  , fizzbuzz = require ('./lib/fizzbuzz').fizzbuzz;
 
 var app = module.exports = express.createServer();
 
@@ -33,18 +34,8 @@ app.configure('production', function(){
 app.get('/', routes.index);
 
 app.get('/:var', function(req, res){
-  var num;
-  num = req.params.var;
-
-  if(       num % 3 !== 0 && num % 5 !== 0 ){
-    res.send(num+" -> "+req.params.var)
-  }else if( num % 3 === 0 && num % 5 !== 0 ){
-    res.send(num+" -> "+"fizz")
-  } else if(num % 3 !== 0 && num % 5 === 0 ){
-    res.send(num+" -> "+"buzz")
-  } else{ //num % 3 === 0 && num % 5 === 0
-    res.send(num+" -> "+"fizzbuzz")
-  }
+  var num = req.params.var;
+  res.send(num+' -> '+fizzbuzz(num));
 
 });
 
