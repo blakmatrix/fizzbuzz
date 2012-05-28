@@ -1,2 +1,19 @@
-h1= title
-p Welcome to #{title}
+div.navbar
+  div.navbar-inner
+    div.container
+      a(href='#').brand #{title}
+      ul.nav
+        li.active 
+          a(href='#') Home
+        li  
+          a(href='#') About
+
+div.container
+  div.content
+    div.page-header
+      h1 #{title}
+        small ...
+    div.row
+    input(class="btn btn-primary btn-large" ,type="submit", value="Run fizzbuzz")
+    br
+    textarea( class="input-xlarge", id="textarea", rows="3", style="margin: 0px; width: 400px; height:300px")

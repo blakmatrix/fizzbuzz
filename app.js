@@ -17,6 +17,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
+  app.use(express.favicon());
 });
 
 app.configure('development', function(){
@@ -31,17 +32,19 @@ app.configure('production', function(){
 
 app.get('/', routes.index);
 app.get('/:var', function(req, res){
+  var num;
+  num = req.params.var;
 
-  if( req.params.var % 3 !== 0 && req.params.var % 5 !== 0){
+  if(       num % 3 !== 0 && num % 5 !== 0 ){
     res.send(req.params.var)
-  }else if( req.params.var % 3 === 0 && req.params.var % 5 !== 0 ){
+  }else if( num % 3 === 0 && num % 5 !== 0 ){
     res.send("fizz")
-  } else if(req.params.var % 3 !== 0 && req.params.var % 5 === 0){
+  } else if(num % 3 !== 0 && num % 5 === 0 ){
     res.send("buzz")
-  } else{ // req.params.var % 3 === 0 && req.params.var % 5 === 0
+  } else{ //num % 3 === 0 && num % 5 === 0
     res.send("fizzbuzz")
   }
-  res.send('var: '+req.params.var)
+  res.send('var: '+ num )
 });
 
 app.listen( (process.env.PORT || 3000) , function(){

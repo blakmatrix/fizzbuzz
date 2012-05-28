@@ -2,5 +2,14 @@
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/lib/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lobster|Droid+Serif|Droid+Sans')
   body!= body
+
+
+div.footer(style='text-decorations: none; height: 35px; position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000; overflow: visible;')
+  div.navbar-inner
+    div.container
+      h3 
+        a(href='https://github.com/blakmatrix', style='text-decorations: none;') &copy; blakmatrix@gmail.com 2012
+        small I LOVE fizzbuzz.
