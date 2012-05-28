@@ -31,20 +31,21 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
+
 app.get('/:var', function(req, res){
   var num;
   num = req.params.var;
 
   if(       num % 3 !== 0 && num % 5 !== 0 ){
-    res.send(req.params.var)
+    res.send(num+" -> "+req.params.var)
   }else if( num % 3 === 0 && num % 5 !== 0 ){
-    res.send("fizz")
+    res.send(num+" -> "+"fizz")
   } else if(num % 3 !== 0 && num % 5 === 0 ){
-    res.send("buzz")
+    res.send(num+" -> "+"buzz")
   } else{ //num % 3 === 0 && num % 5 === 0
-    res.send("fizzbuzz")
+    res.send(num+" -> "+"fizzbuzz")
   }
-  res.send('var: '+ num )
+
 });
 
 app.listen( (process.env.PORT || 3000) , function(){

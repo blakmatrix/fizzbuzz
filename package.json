@@ -1,6 +1,13 @@
 {
+  "author": "Farrin A. Reid <blakmatrix@gmail.com> (blakmatrix.com)",
+  "description": "fizz,buzz,fizzbuzz... baz?",
   "name": "fizzbuzz",
-  "version": "0.0.1-3",
+  "version": "0.0.1-4",
+  "homepage": "https://github.com/blakmatrix/fizzbuzz",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:blakmatrix/fizzbuzz.git"
+  },
   "private": true,
   "dependencies": {
     "express": "2.5.8",
