@@ -1,9 +1,16 @@
 {
-    "name": "fizzbuzz"
-  , "version": "0.0.1"
-  , "private": true
-  , "dependencies": {
-      "express": "2.5.8"
-    , "jade": ">= 0.0.1"
+  "name": "fizzbuzz",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "2.5.8",
+    "jade": ">= 0.0.1"
+  },
+  "subdomain": "fizzbuzz",
+  "scripts": {
+    "start": "app.js"
+  },
+  "engines": {
+    "node": "0.6.x"
   }
 }

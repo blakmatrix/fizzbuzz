@@ -31,9 +31,9 @@ app.configure('production', function(){
 
 app.get('/', routes.index);
 app.get('/:var', function(){
-  res.send('var: ${var}')
+  res.send('var: ${ req.params.var }')
 });
 
-app.listen(3000, function(){
+app.listen( (process.env.PORT || 3000) , function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
