@@ -2,7 +2,7 @@
   "author": "Farrin A. Reid <blakmatrix@gmail.com> (blakmatrix.com)",
   "description": "fizz,buzz,fizzbuzz... baz?",
   "name": "fizzbuzz",
-  "version": "0.0.1-7",
+  "version": "0.0.1-8",
   "homepage": "https://github.com/blakmatrix/fizzbuzz",
   "main": "./lib/main",
   "bin": {
