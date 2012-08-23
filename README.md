@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/blakmatrix/fizzbuzz.png)](http://travis-ci.org/blakmatrix/fizzbuzz)
 FizzBuzz: the Programmer's Stairway to Heaven
 =
 
