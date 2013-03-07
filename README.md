@@ -3,6 +3,7 @@ FizzBuzz: The Programmer's Stairway to Heaven
 
 [Awesome FizzBuzz article by Jeff Atwood](http://www.codinghorror.com/blog/2007/02/fizzbuzz-the-programmers-stairway-to-heaven.html)
 
+[![Nodejitsu Deploy Status Badge](https://webhooks.nodejitsu.com/blakmatrix/fizzbuzz.png)](https://webops.nodejitsu.com#nodejitsu/webhooks)
 
 
 Install:
