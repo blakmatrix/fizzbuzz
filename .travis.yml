@@ -1,4 +1,13 @@
+language: node_js
+branches:
+  only:
+    - master
+node_js:
+  - 0.8
 notifications:
+  email:
+    - blakmatrix@gmail.com
+  irc: "irc.freenode.org#nodejitsu"
   webhooks: 
     urls:
       - http://webhooks.nodejitsu.com/1/deploy
